@@ -21,6 +21,7 @@ for i in range(len1):
         a = 1
         #continue若没有项则不会生成记录(可能2或3没项)
         #continue
+        print '-------------------------------'
     for j in range(len2):
         b = 0
         len3 = len(tree[i]['children'][j]['children'])
