@@ -11,7 +11,7 @@ tree[0]['text']
 tree[0]['children'][0]['text']
 tree[0]['children'][1]['text']
 tree[0]['children'][0]['children'][0]['text']
-
+print '-------------------------------'
 len1 = len(tree)
 ha,le = 0,0
 for i in range(len1):
