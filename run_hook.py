@@ -10,7 +10,7 @@ def application(environ, start_response):
     except (ValueError):
         request_body_size = 0
     request_body = environ['wsgi.input'].read(request_body_size)
-    if not request_body:
+    if request_body:
         print type(request_body)
         print [request_body]
         request_body = json.loads(request_body)
