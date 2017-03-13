@@ -4,5 +4,6 @@ def application(environ, start_response):
  #os.system('git add .')
  #os.system('git commit -m "merge"')
  #os.system('git pull origin master')
+ os.system('git pull')
  print "success"
  return ['My own hello webhook']
