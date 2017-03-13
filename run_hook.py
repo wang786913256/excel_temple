@@ -13,15 +13,15 @@ def application(environ, start_response):
     if not request_body:
         print type(request_body)
         print [request_body]
-    request_body = json.loads(request_body)
-    print request_body["ref"]
-    # d = parse_qs(request_body)
-    # print d
-    #os.system('git add .')
-    #os.system('git commit -m "merge"')
-    #os.system('git pull origin master')
-    os.system('git pull')
-    print "success"
+        request_body = json.loads(request_body)
+        print request_body["ref"]
+        # d = parse_qs(request_body)
+        # print d
+        #os.system('git add .')
+        #os.system('git commit -m "merge"')
+        #os.system('git pull origin master')
+        os.system('git pull')
+        print "success"
     return ['My own hello webhook']
 
 if __name__ == "__main__":
