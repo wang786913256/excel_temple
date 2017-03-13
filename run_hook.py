@@ -14,7 +14,8 @@ def application(environ, start_response):
         print type(request_body)
         print [request_body]
         request_body = json.loads(request_body)
-        print request_body["ref"]
+        ref = request_body.get("ref")
+        print ref
         # d = parse_qs(request_body)
         # print d
         #os.system('git add .')
