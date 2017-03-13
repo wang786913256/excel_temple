@@ -10,7 +10,7 @@ def application(environ, start_response):
     except (ValueError):
         request_body_size = 0
     request_body = environ['wsgi.input'].read(request_body_size)
-    if request_body is not None:
+    if not request_body:
         print type(request_body)
     request_body = json.loads(request_body)
     print request_body["ref"]
