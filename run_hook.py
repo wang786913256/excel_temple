@@ -10,8 +10,9 @@ def application(environ, start_response):
         request_body_size = 0
     request_body = environ['wsgi.input'].read(request_body_size)
     print request_body
-    d = parse_qs(request_body)
-    print d
+    print request_body["ref"]
+    # d = parse_qs(request_body)
+    # print d
     #os.system('git add .')
     #os.system('git commit -m "merge"')
     #os.system('git pull origin master')
