@@ -1,5 +1,6 @@
 from wsgiref.simple_server import make_server
 import os
+import json
 from cgi import parse_qs, escape
 
 def application(environ, start_response):
@@ -9,7 +10,9 @@ def application(environ, start_response):
     except (ValueError):
         request_body_size = 0
     request_body = environ['wsgi.input'].read(request_body_size)
-    print request_body
+    if request_body is not None:
+        print type(request_body)
+    request_body = json.loads(request_body)
     print request_body["ref"]
     # d = parse_qs(request_body)
     # print d
